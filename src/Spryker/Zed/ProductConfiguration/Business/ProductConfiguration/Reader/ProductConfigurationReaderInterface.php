@@ -5,12 +5,12 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace Spryker\Zed\ProductConfiguration\Persistence;
+namespace Spryker\Zed\ProductConfiguration\Business\ProductConfiguration\Reader;
 
 use Generated\Shared\Transfer\ProductConfigurationCollectionTransfer;
 use Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer;
 
-interface ProductConfigurationRepositoryInterface
+interface ProductConfigurationReaderInterface
 {
     /**
      * @param \Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
