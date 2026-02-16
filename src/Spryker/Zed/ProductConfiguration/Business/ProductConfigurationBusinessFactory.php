@@ -14,7 +14,6 @@ use Spryker\Zed\ProductConfiguration\Business\ProductConfiguration\Reader\Produc
 /**
  * @method \Spryker\Zed\ProductConfiguration\Persistence\ProductConfigurationRepositoryInterface getRepository()
  * @method \Spryker\Zed\ProductConfiguration\ProductConfigurationConfig getConfig()
- * @method \Spryker\Zed\ProductConfiguration\Persistence\ProductConfigurationEntityManagerInterface getEntityManager()
  */
 class ProductConfigurationBusinessFactory extends AbstractBusinessFactory
 {

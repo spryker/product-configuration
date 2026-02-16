@@ -14,7 +14,6 @@ use Spryker\Zed\ProductConfiguration\Persistence\Propel\ProductConfiguration\Map
 /**
  * @method \Spryker\Zed\ProductConfiguration\Persistence\ProductConfigurationRepositoryInterface getRepository()
  * @method \Spryker\Zed\ProductConfiguration\ProductConfigurationConfig getConfig()
- * @method \Spryker\Zed\ProductConfiguration\Persistence\ProductConfigurationEntityManagerInterface getEntityManager()
  */
 class ProductConfigurationPersistenceFactory extends AbstractPersistenceFactory
 {
