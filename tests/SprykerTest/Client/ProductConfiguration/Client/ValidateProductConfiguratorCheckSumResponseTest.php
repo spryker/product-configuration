@@ -168,16 +168,14 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
             ])
             ->getMock();
 
-        $storeClientMock = $this->getMockBuilder(ProductConfigurationToStoreClientInterface::class)
-            ->onlyMethods(['getCurrentStore'])->getMockForAbstractClass();
+        $storeClientMock = $this->createMock(ProductConfigurationToStoreClientInterface::class);
 
         $storeClientMock->method('getCurrentStore')->willReturn(new StoreTransfer());
 
         $productConfigurationFactoryMock->method('getStoreClient')
             ->willReturn($storeClientMock);
 
-        $currencyClientMock = $this->getMockBuilder(ProductConfigurationToCurrencyClientInterface::class)
-            ->onlyMethods(['getCurrent'])->getMockForAbstractClass();
+        $currencyClientMock = $this->createMock(ProductConfigurationToCurrencyClientInterface::class);
 
         $currencyClientMock->method('getCurrent')->willReturn(new CurrencyTransfer());
 
