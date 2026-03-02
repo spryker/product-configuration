@@ -11,8 +11,5 @@ use Generated\Shared\Transfer\CurrencyTransfer;
 
 interface ProductConfigurationToCurrencyClientInterface
 {
-    /**
-     * @return \Generated\Shared\Transfer\CurrencyTransfer
-     */
     public function getCurrent(): CurrencyTransfer;
 }

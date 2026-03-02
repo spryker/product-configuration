@@ -128,12 +128,6 @@ class ProductConfigurationInstancePriceMapper implements ProductConfigurationIns
         return $productConfigurationInstanceTransfer;
     }
 
-    /**
-     * @param string $currencyCode
-     * @param array $priceData
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function mapPriceDataToPriceProductTransfer(
         string $currencyCode,
         array $priceData

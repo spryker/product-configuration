@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\ProductConfigurationInstanceTransfer;
 
 interface ProductConfigurationInstanceHashGeneratorInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     *
-     * @return string
-     */
     public function getProductConfigurationInstanceHash(ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer): string;
 }

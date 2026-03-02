@@ -18,20 +18,12 @@ class ProductConfigurationReader implements ProductConfigurationReaderInterface
      */
     protected ProductConfigurationRepositoryInterface $productConfigurationRepository;
 
-    /**
-     * @param \Spryker\Zed\ProductConfiguration\Persistence\ProductConfigurationRepositoryInterface $productConfigurationRepository
-     */
     public function __construct(
         ProductConfigurationRepositoryInterface $productConfigurationRepository
     ) {
         $this->productConfigurationRepository = $productConfigurationRepository;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer
-     */
     public function getProductConfigurationCollection(
         ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
     ): ProductConfigurationCollectionTransfer {

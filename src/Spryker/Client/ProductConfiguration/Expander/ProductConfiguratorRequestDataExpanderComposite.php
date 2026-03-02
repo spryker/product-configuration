@@ -24,11 +24,6 @@ class ProductConfiguratorRequestDataExpanderComposite implements ProductConfigur
         $this->productConfiguratorRequestDataExpanders = $productConfiguratorRequestDataExpanders;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         foreach ($this->productConfiguratorRequestDataExpanders as $productConfiguratorRequestDataExpander) {

@@ -22,9 +22,6 @@ class PriceProductConfigurationVolumeFilter implements PriceProductConfiguration
      */
     protected $priceProductConfigurationFilter;
 
-    /**
-     * @param \Spryker\Service\ProductConfiguration\Filter\PriceProductConfigurationFilterInterface $priceProductConfigurationFilter
-     */
     public function __construct(PriceProductConfigurationFilterInterface $priceProductConfigurationFilter)
     {
         $this->priceProductConfigurationFilter = $priceProductConfigurationFilter;
@@ -84,12 +81,6 @@ class PriceProductConfigurationVolumeFilter implements PriceProductConfiguration
         return $minPriceProductTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $minPrice
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceToCompare
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function resolveLowestPrice(PriceProductTransfer $minPrice, PriceProductTransfer $priceToCompare): PriceProductTransfer
     {
         if ($minPrice->getVolumeQuantity() > $priceToCompare->getVolumeQuantity()) {
@@ -99,11 +90,6 @@ class PriceProductConfigurationVolumeFilter implements PriceProductConfiguration
         return $priceToCompare;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\PriceProductTransfer $priceProductTransfer
-     *
-     * @return bool
-     */
     protected function isSingleItemPrice(PriceProductTransfer $priceProductTransfer): bool
     {
         return $priceProductTransfer->getVolumeQuantity() === null;

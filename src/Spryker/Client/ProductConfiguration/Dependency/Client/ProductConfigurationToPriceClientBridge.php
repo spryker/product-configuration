@@ -22,9 +22,6 @@ class ProductConfigurationToPriceClientBridge implements ProductConfigurationToP
         $this->priceClient = $priceClient;
     }
 
-    /**
-     * @return string
-     */
     public function getCurrentPriceMode(): string
     {
         return $this->priceClient->getCurrentPriceMode();

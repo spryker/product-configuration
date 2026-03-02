@@ -43,9 +43,6 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
      */
     protected $productConfigurationFactoryMock;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -55,9 +52,6 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
         $this->productConfigurationClient = $this->tester->getClient()->setFactory($this->productConfigurationFactoryMock);
     }
 
-    /**
-     * @return void
-     */
     public function testWillSetIsSuccessTrueWhenValidationPass(): void
     {
         // Arrange
@@ -78,9 +72,6 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testWillSetIsSuccessFalseWhenValidationFail(): void
     {
         // Arrange
@@ -112,9 +103,6 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testWillSetIsSuccessFalseAndReturnOnFirstFailedValidator(): void
     {
         // Arrange
@@ -154,9 +142,6 @@ class ValidateProductConfiguratorCheckSumResponseTest extends Unit
         );
     }
 
-    /**
-     * @return \Spryker\Client\ProductConfiguration\ProductConfigurationFactory
-     */
     protected function getProductConfigurationFactoryMock(): ProductConfigurationFactory
     {
         $productConfigurationFactoryMock = $this->getMockBuilder(ProductConfigurationFactory::class)

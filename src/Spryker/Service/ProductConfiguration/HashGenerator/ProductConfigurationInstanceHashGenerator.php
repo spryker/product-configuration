@@ -29,11 +29,6 @@ class ProductConfigurationInstanceHashGenerator implements ProductConfigurationI
      */
     protected ProductConfigurationConfig $productConfigurationConfig;
 
-    /**
-     * @param \Spryker\Service\ProductConfiguration\Dependency\Service\ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService
-     * @param \Spryker\Service\ProductConfiguration\Dependency\Service\ProductConfigurationToUtilTextServiceInterface $utilTextService
-     * @param \Spryker\Service\ProductConfiguration\ProductConfigurationConfig $productConfigurationConfig
-     */
     public function __construct(
         ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService,
         ProductConfigurationToUtilTextServiceInterface $utilTextService,
@@ -44,11 +39,6 @@ class ProductConfigurationInstanceHashGenerator implements ProductConfigurationI
         $this->productConfigurationConfig = $productConfigurationConfig;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer
-     *
-     * @return string
-     */
     public function getProductConfigurationInstanceHash(ProductConfigurationInstanceTransfer $productConfigurationInstanceTransfer): string
     {
         $productConfigurationInstanceData = $this->filterProductConfigurationInstanceData(

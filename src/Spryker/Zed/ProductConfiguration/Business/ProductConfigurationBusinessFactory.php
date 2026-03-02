@@ -17,9 +17,6 @@ use Spryker\Zed\ProductConfiguration\Business\ProductConfiguration\Reader\Produc
  */
 class ProductConfigurationBusinessFactory extends AbstractBusinessFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductConfiguration\Business\ProductConfiguration\Reader\ProductConfigurationReaderInterface
-     */
     public function createProductConfigurationReader(): ProductConfigurationReaderInterface
     {
         return new ProductConfigurationReader(

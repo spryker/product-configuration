@@ -21,9 +21,6 @@ class ProductConfigurationResponseMapper implements ProductConfigurationResponse
      */
     protected $productConfigurationInstancePriceMapper;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Mapper\ProductConfigurationInstancePriceMapperInterface $productConfigurationInstancePriceMapper
-     */
     public function __construct(ProductConfigurationInstancePriceMapperInterface $productConfigurationInstancePriceMapper)
     {
         $this->productConfigurationInstancePriceMapper = $productConfigurationInstancePriceMapper;

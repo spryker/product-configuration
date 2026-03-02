@@ -17,19 +17,11 @@ class ProductConfiguratorRequestDataLocaleExpander implements ProductConfigurato
      */
     protected $localeClient;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Client\ProductConfigurationToLocaleInterface $localeClient
-     */
     public function __construct(ProductConfigurationToLocaleInterface $localeClient)
     {
         $this->localeClient = $localeClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         return $productConfiguratorRequestDataTransfer->setLocaleName(

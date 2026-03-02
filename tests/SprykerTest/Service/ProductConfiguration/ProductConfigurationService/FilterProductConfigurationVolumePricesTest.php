@@ -49,9 +49,6 @@ class FilterProductConfigurationVolumePricesTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testFiltersOutNonSingleItemPrices(): void
     {
         // Arrange
@@ -85,9 +82,6 @@ class FilterProductConfigurationVolumePricesTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testResolvesLowestVolumeQuantityPrice(): void
     {
         // Arrange
@@ -121,9 +115,6 @@ class FilterProductConfigurationVolumePricesTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsSingleItemPriceWhenVolumeQuantityPriceWasNotResolved(): void
     {
         // Arrange
@@ -158,12 +149,6 @@ class FilterProductConfigurationVolumePricesTest extends Unit
         );
     }
 
-    /**
-     * @param bool $hasProductConfiguration
-     * @param int|null $volumeQuantity
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function createPriceProductTransfer(bool $hasProductConfiguration = false, ?int $volumeQuantity = null): PriceProductTransfer
     {
         $priceDimensionTransfer = (new PriceProductDimensionTransfer())

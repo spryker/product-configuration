@@ -54,12 +54,6 @@ class ProductConfiguratorMandatoryFieldsResponseValidator implements ProductConf
         return $productConfiguratorResponseProcessorResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer
-     * @param string $errorMessage
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer
-     */
     protected function addErrorToResponse(
         ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer,
         string $errorMessage
@@ -69,11 +63,6 @@ class ProductConfiguratorMandatoryFieldsResponseValidator implements ProductConf
             ->setIsSuccessful(false);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorResponseTransfer $productConfiguratorResponseTransfer
-     *
-     * @return void
-     */
     protected function assertMandatoryFields(ProductConfiguratorResponseTransfer $productConfiguratorResponseTransfer): void
     {
         $productConfiguratorResponseTransfer

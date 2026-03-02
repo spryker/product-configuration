@@ -49,18 +49,12 @@ class ExpandProductConfiguratorRequestWithContextDataTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     protected function setUp(): void
     {
         parent::setUp();
         $this->addDependencies();
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenProductConfiguratorRequestDataIsMissing(): void
     {
         // Arrange
@@ -73,9 +67,6 @@ class ExpandProductConfiguratorRequestWithContextDataTest extends Unit
         $this->tester->getClient()->expandProductConfiguratorRequestWithContextData($productConfiguratorRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandsWithContextData(): void
     {
         // Arrange
@@ -112,9 +103,6 @@ class ExpandProductConfiguratorRequestWithContextDataTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testExecutesProductConfiguratorRequestExpanderPlugins(): void
     {
         // Arrange
@@ -151,9 +139,6 @@ class ExpandProductConfiguratorRequestWithContextDataTest extends Unit
         return $storeStorageStoreExpanderPluginMock;
     }
 
-    /**
-     * @return void
-     */
     protected function addDependencies(): void
     {
         $currencyClientMock = $this->createMock(ProductConfigurationToCurrencyClientInterface::class);
@@ -168,9 +153,6 @@ class ExpandProductConfiguratorRequestWithContextDataTest extends Unit
         $this->tester->setDependency(PriceDependencyProvider::CLIENT_QUOTE, $quoteClientMock);
     }
 
-    /**
-     * @return bool
-     */
     protected function isDynamicStoreEnabled(): bool
     {
         return (bool)getenv('SPRYKER_DYNAMIC_STORE_MODE');

@@ -51,9 +51,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testSendsRequestAndReturnsRedirectUrl(): void
     {
         // Arrange
@@ -81,9 +78,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
         $this->assertNotNull($productConfiguratorRedirectTransfer->getConfiguratorRedirectUrl(), 'Expects redirect url to be provided.');
     }
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenAccessTokenRequestUrlIsNotProvided(): void
     {
         // Arrange
@@ -109,9 +103,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
         $productConfiguratorRequestSenderMock->sendProductConfiguratorAccessTokenRequest($productConfiguratorRequestTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testReturnsNotSuccessfulResponseWhenRequestFails(): void
     {
         // Arrange
@@ -143,11 +134,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
         );
     }
 
-    /**
-     * @param string|null $errorMessage
-     *
-     * @return \Psr\Http\Message\ResponseInterface
-     */
     protected function createConfiguratorResponse(?string $errorMessage = null): ResponseInterface
     {
         $responseBody = json_encode([
@@ -173,9 +159,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
             ->getMock();
     }
 
-    /**
-     * @return \Spryker\Client\ProductConfiguration\Dependency\Service\ProductConfigurationToUtilEncodingServiceInterface
-     */
     protected function createProductConfigurationToUtilEncodingServiceBridge(): ProductConfigurationToUtilEncodingServiceInterface
     {
         return new ProductConfigurationToUtilEncodingServiceBridge(
@@ -183,12 +166,6 @@ class ProductConfiguratorRequestSenderTest extends Unit
         );
     }
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\External\ProductConfigurationToHttpClientInterface $httpClient
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Service\ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService
-     *
-     * @return \Spryker\Client\ProductConfiguration\Sender\ProductConfiguratorRequestSenderInterface
-     */
     protected function getProductConfiguratorRequestSenderMock(
         ProductConfigurationToHttpClientInterface $httpClient,
         ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService

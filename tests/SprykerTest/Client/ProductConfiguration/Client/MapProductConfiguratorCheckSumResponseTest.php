@@ -85,9 +85,6 @@ class MapProductConfiguratorCheckSumResponseTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testThrowsExceptionWhenProductConfigurationInstanceIsMissing(): void
     {
         // Arrange
@@ -100,9 +97,6 @@ class MapProductConfiguratorCheckSumResponseTest extends Unit
         $this->tester->getClient()->mapProductConfiguratorCheckSumResponse([], $productConfiguratorResponseTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testMapsPriceData(): void
     {
         // Arrange
@@ -203,9 +197,6 @@ class MapProductConfiguratorCheckSumResponseTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testIgnoresEmptyPriceData(): void
     {
         // Arrange

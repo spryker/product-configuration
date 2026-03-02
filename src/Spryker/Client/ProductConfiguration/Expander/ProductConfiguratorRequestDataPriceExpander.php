@@ -17,19 +17,11 @@ class ProductConfiguratorRequestDataPriceExpander implements ProductConfigurator
      */
     protected $priceClient;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Client\ProductConfigurationToPriceClientInterface $priceClient
-     */
     public function __construct(ProductConfigurationToPriceClientInterface $priceClient)
     {
         $this->priceClient = $priceClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         return $productConfiguratorRequestDataTransfer->setPriceMode(

@@ -43,10 +43,6 @@ class ProductConfiguratorRequestSender implements ProductConfiguratorRequestSend
      */
     protected $utilEncodingService;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\External\ProductConfigurationToHttpClientInterface $httpClient
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Service\ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService
-     */
     public function __construct(
         ProductConfigurationToHttpClientInterface $httpClient,
         ProductConfigurationToUtilEncodingServiceInterface $utilEncodingService
@@ -55,11 +51,6 @@ class ProductConfiguratorRequestSender implements ProductConfiguratorRequestSend
         $this->utilEncodingService = $utilEncodingService;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRedirectTransfer
-     */
     public function sendProductConfiguratorAccessTokenRequest(
         ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
     ): ProductConfiguratorRedirectTransfer {
@@ -112,13 +103,6 @@ class ProductConfiguratorRequestSender implements ProductConfiguratorRequestSend
         ];
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRedirectTransfer $productConfiguratorRedirectTransfer
-     * @param string $message
-     * @param \Spryker\Client\ProductConfiguration\Http\Exception\ProductConfigurationHttpRequestException $configurationHttpRequestException
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRedirectTransfer
-     */
     protected function addProductConfigurationError(
         ProductConfiguratorRedirectTransfer $productConfiguratorRedirectTransfer,
         string $message,

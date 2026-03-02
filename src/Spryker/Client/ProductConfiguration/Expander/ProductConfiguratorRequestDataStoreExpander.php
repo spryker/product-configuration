@@ -17,19 +17,11 @@ class ProductConfiguratorRequestDataStoreExpander implements ProductConfigurator
      */
     protected $storeClient;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Client\ProductConfigurationToStoreClientInterface $storeClient
-     */
     public function __construct(ProductConfigurationToStoreClientInterface $storeClient)
     {
         $this->storeClient = $storeClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         return $productConfiguratorRequestDataTransfer->setStoreName(

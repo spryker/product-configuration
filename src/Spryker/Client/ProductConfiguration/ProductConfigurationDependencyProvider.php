@@ -93,11 +93,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
      */
     public const CHECKSUM_GENERATOR = 'CHECKSUM_GENERATOR';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -119,11 +114,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductService(Container $container): Container
     {
         $container->set(static::SERVICE_PRICE_PRODUCT, function (Container $container) {
@@ -135,11 +125,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addProductConfigurationService(Container $container): Container
     {
         $container->set(static::SERVICE_PRODUCT_CONFIGURATION, function (Container $container) {
@@ -149,11 +134,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addHttpClient(Container $container): Container
     {
         $container->set(static::CLIENT_HTTP, function () {
@@ -165,11 +145,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addCurrencyClient(Container $container): Container
     {
         $container->set(static::CLIENT_CURRENCY, function (Container $container) {
@@ -181,11 +156,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRICE, function (Container $container) {
@@ -197,11 +167,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addLocaleClient(Container $container): Container
     {
         $container->set(static::CLIENT_LOCALE, function (Container $container) {
@@ -213,11 +178,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addCustomerClient(Container $container): Container
     {
         $container->set(static::CLIENT_CUSTOMER, function (Container $container) {
@@ -229,11 +189,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addStoreClient(Container $container): Container
     {
         $container->set(static::CLIENT_STORE, function (Container $container) {
@@ -245,11 +200,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductVolumeClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRICE_PRODUCT_VOLUME, function (Container $container) {
@@ -261,11 +211,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addUtilEncodingService(Container $container): Container
     {
         $container->set(static::SERVICE_UTIL_ENCODING, function (Container $container) {
@@ -277,11 +222,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addProductConfigurationRequestExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_CONFIGURATOR_REQUEST_EXPANDER, function () {
@@ -291,11 +231,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addChecksumGenerator(Container $container): Container
     {
         $container->set(static::CHECKSUM_GENERATOR, function () {
@@ -307,9 +242,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @return \Spryker\ChecksumGenerator\Checksum\ChecksumGeneratorInterface
-     */
     protected function getChecksumGenerator(): ChecksumGeneratorInterface
     {
         return new CrcOpenSslChecksumGenerator(
@@ -325,11 +257,6 @@ class ProductConfigurationDependencyProvider extends AbstractDependencyProvider
         return [];
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addPriceProductConfigurationPriceExtractorPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_PRODUCT_CONFIGURATION_PRICE_EXTRACTOR, function () {

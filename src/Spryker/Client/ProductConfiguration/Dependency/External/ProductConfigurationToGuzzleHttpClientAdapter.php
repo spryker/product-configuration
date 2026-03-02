@@ -19,9 +19,6 @@ class ProductConfigurationToGuzzleHttpClientAdapter implements ProductConfigurat
      */
     protected $guzzleHttpClient;
 
-    /**
-     * @param \GuzzleHttp\ClientInterface $guzzleHttpClient
-     */
     public function __construct(ClientInterface $guzzleHttpClient)
     {
         $this->guzzleHttpClient = $guzzleHttpClient;

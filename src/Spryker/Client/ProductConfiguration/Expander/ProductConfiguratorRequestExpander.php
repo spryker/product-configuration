@@ -33,11 +33,6 @@ class ProductConfiguratorRequestExpander implements ProductConfiguratorRequestEx
         $this->productConfiguratorRequestExpanderPlugins = $productConfiguratorRequestExpanderPlugins;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer
-     */
     public function expandProductConfiguratorRequestWithContextData(
         ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
     ): ProductConfiguratorRequestTransfer {
@@ -52,11 +47,6 @@ class ProductConfiguratorRequestExpander implements ProductConfiguratorRequestEx
         return $this->executeProductConfiguratorRequestExpanderPlugins($productConfiguratorRequestTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer
-     */
     protected function executeProductConfiguratorRequestExpanderPlugins(
         ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
     ): ProductConfiguratorRequestTransfer {

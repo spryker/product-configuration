@@ -23,9 +23,6 @@ class ProductConfiguratorTimestampResponseValidator implements ProductConfigurat
      */
     protected $config;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\ProductConfigurationConfig $config
-     */
     public function __construct(ProductConfigurationConfig $config)
     {
         $this->config = $config;
@@ -58,12 +55,6 @@ class ProductConfiguratorTimestampResponseValidator implements ProductConfigurat
         return $productConfiguratorResponseProcessorResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer
-     * @param string $errorMessage
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer
-     */
     protected function getErrorResponse(
         ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer,
         string $errorMessage

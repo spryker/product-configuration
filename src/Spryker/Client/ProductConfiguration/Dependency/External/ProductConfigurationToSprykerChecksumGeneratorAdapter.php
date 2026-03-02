@@ -16,9 +16,6 @@ class ProductConfigurationToSprykerChecksumGeneratorAdapter implements ProductCo
      */
     protected $checksumGenerator;
 
-    /**
-     * @param \Spryker\ChecksumGenerator\Checksum\ChecksumGeneratorInterface $checksumGenerator
-     */
     public function __construct(ChecksumGeneratorInterface $checksumGenerator)
     {
         $this->checksumGenerator = $checksumGenerator;

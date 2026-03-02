@@ -56,12 +56,6 @@ class ProductConfigurationRepository extends AbstractRepository implements Produ
             );
     }
 
-    /**
-     * @param \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery $productConfigurationQuery
-     * @param \Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
-     *
-     * @return \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery
-     */
     protected function applyProductConfigurationFilters(
         SpyProductConfigurationQuery $productConfigurationQuery,
         ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
@@ -74,12 +68,6 @@ class ProductConfigurationRepository extends AbstractRepository implements Produ
         return $this->buildQueryByConditions($productConfigurationConditionsTransfer, $productConfigurationQuery);
     }
 
-    /**
-     * @param \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery $productConfigurationQuery
-     * @param \Generated\Shared\Transfer\PaginationTransfer $paginationTransfer
-     *
-     * @return \Propel\Runtime\ActiveQuery\ModelCriteria
-     */
     protected function applyProductConfigurationPagination(
         SpyProductConfigurationQuery $productConfigurationQuery,
         PaginationTransfer $paginationTransfer
@@ -104,12 +92,6 @@ class ProductConfigurationRepository extends AbstractRepository implements Produ
         return $paginationModel->getQuery();
     }
 
-    /**
-     * @param \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery $productConfigurationQuery
-     * @param \Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
-     *
-     * @return \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery
-     */
     protected function applyProductConfigurationSorting(
         SpyProductConfigurationQuery $productConfigurationQuery,
         ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
@@ -125,12 +107,6 @@ class ProductConfigurationRepository extends AbstractRepository implements Produ
         return $productConfigurationQuery;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationConditionsTransfer $productConfigurationConditionsTransfer
-     * @param \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery $productConfigurationQuery
-     *
-     * @return \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery
-     */
     protected function buildQueryByConditions(
         ProductConfigurationConditionsTransfer $productConfigurationConditionsTransfer,
         SpyProductConfigurationQuery $productConfigurationQuery

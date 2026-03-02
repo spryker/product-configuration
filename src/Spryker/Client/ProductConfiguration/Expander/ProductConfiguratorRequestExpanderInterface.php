@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\ProductConfiguratorRequestTransfer;
 
 interface ProductConfiguratorRequestExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestTransfer
-     */
     public function expandProductConfiguratorRequestWithContextData(
         ProductConfiguratorRequestTransfer $productConfiguratorRequestTransfer
     ): ProductConfiguratorRequestTransfer;

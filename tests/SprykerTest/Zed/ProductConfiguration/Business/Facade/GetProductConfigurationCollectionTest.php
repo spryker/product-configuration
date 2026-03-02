@@ -51,9 +51,6 @@ class GetProductConfigurationCollectionTest extends Unit
      */
     protected ProductConfigurationBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsEmptyCollectionWhileNoCriteriaMatched(): void
     {
         // Arrange
@@ -76,9 +73,6 @@ class GetProductConfigurationCollectionTest extends Unit
         $this->assertProductConfigurationCollectionIsEmpty($productConfigurationCollectionTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsCollectionWithOneProductConfigurationWhileUuidCriteriaMatched(): void
     {
         // Arrange
@@ -103,9 +97,6 @@ class GetProductConfigurationCollectionTest extends Unit
         $this->assertProductConfigurationCollectionContainsTransferWithId($productConfigurationCollectionTransfer, $productConfigurationTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsCollectionWithOneProductConfigurationWhileSkuCriteriaMatched(): void
     {
         // Arrange
@@ -137,9 +128,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsCollectionWithOneProductConfigurationWhileIdProductConfigurationCriteriaMatched(): void
     {
         // Arrange
@@ -165,9 +153,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsCollectionWithFiveProductConfigurationsWhileHavingLimitOffsetPaginationAndSortingApplied(): void
     {
         // Arrange
@@ -198,9 +183,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testGetProductConfigurationReturnsCollectionWithFiveProductConfigurationsWhileHavingPagePaginationAndSortingApplied(): void
     {
         // Arrange
@@ -231,11 +213,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer $productConfigurationCollectionTransfer
-     *
-     * @return void
-     */
     protected function assertProductConfigurationCollectionIsEmpty(ProductConfigurationCollectionTransfer $productConfigurationCollectionTransfer): void
     {
         $this->assertCount(
@@ -245,12 +222,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer $productConfigurationCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationTransfer $productConfigurationTransfer
-     *
-     * @return void
-     */
     protected function assertProductConfigurationCollectionContainsTransferWithId(
         ProductConfigurationCollectionTransfer $productConfigurationCollectionTransfer,
         ProductConfigurationTransfer $productConfigurationTransfer
@@ -269,13 +240,6 @@ class GetProductConfigurationCollectionTest extends Unit
         );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer $persistedProductConfigurationCollectionTransfer
-     * @param \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer $productConfigurationCollectionTransfer
-     *
-     * @return void
-     */
     protected function assertProductConfigurationCollectionIsPaginatedAndSorted(
         ProductConfigurationCriteriaTransfer $productConfigurationCriteriaTransfer,
         ProductConfigurationCollectionTransfer $persistedProductConfigurationCollectionTransfer,

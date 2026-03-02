@@ -30,10 +30,6 @@ class ProductConfiguratorCheckSumResponseValidator implements ProductConfigurato
      */
     protected $productConfigurationConfig;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\ProductConfigurationConfig $productConfigurationConfig
-     * @param \Spryker\Client\ProductConfiguration\Dependency\External\ProductConfigurationToChecksumGeneratorInterface $checksumGenerator
-     */
     public function __construct(
         ProductConfigurationConfig $productConfigurationConfig,
         ProductConfigurationToChecksumGeneratorInterface $checksumGenerator
@@ -87,12 +83,6 @@ class ProductConfiguratorCheckSumResponseValidator implements ProductConfigurato
         return $configuratorResponseData;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer
-     * @param string $errorMessage
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorResponseProcessorResponseTransfer
-     */
     protected function getErrorResponse(
         ProductConfiguratorResponseProcessorResponseTransfer $productConfiguratorResponseProcessorResponseTransfer,
         string $errorMessage

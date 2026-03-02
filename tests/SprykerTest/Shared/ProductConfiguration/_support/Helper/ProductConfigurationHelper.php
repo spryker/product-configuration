@@ -54,11 +54,6 @@ class ProductConfigurationHelper extends Module
         return $this->persistProductConfiguration($this->haveProductConfigurationTransfer($seed));
     }
 
-    /**
-     * @param int $numberOfProductConfigurationTransfers
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationCollectionTransfer
-     */
     public function haveProductConfigurationCollectionTransferWithProductConfigurationTransfersPersisted(
         int $numberOfProductConfigurationTransfers = 15
     ): ProductConfigurationCollectionTransfer {
@@ -73,11 +68,6 @@ class ProductConfigurationHelper extends Module
         return $productConfigurationCollectionTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfigurationTransfer $productConfigurationTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfigurationTransfer
-     */
     protected function persistProductConfiguration(ProductConfigurationTransfer $productConfigurationTransfer): ProductConfigurationTransfer
     {
         $productConfigurationEntity = (new SpyProductConfiguration())->fromArray($productConfigurationTransfer->toArray());
@@ -91,11 +81,6 @@ class ProductConfigurationHelper extends Module
         return $productConfigurationTransfer->fromArray($productConfigurationEntity->toArray(), true);
     }
 
-    /**
-     * @param int $idProductConfiguration
-     *
-     * @return void
-     */
     protected function deleteProductConfiguration(int $idProductConfiguration): void
     {
         $this->debug(sprintf('Deleting product configuration: %d', $idProductConfiguration));
@@ -108,9 +93,6 @@ class ProductConfigurationHelper extends Module
         }
     }
 
-    /**
-     * @return \SprykerTest\Shared\Product\Helper\ProductDataHelper
-     */
     protected function getProductDataHelper(): ProductDataHelper
     {
         /** @var \SprykerTest\Shared\Product\Helper\ProductDataHelper $productDataHelper */

@@ -42,9 +42,6 @@ class FilterProductConfigurationPricesTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testFiltersOutProductConfigurationPricesWhenProductConfigurationIsMissing(): void
     {
         // Arrange
@@ -66,9 +63,6 @@ class FilterProductConfigurationPricesTest extends Unit
         $this->assertNull($priceProductTransfers[0]->getPriceDimension()->getProductConfigurationInstanceHash(), 'Expects product configuration instance hash to be empty.');
     }
 
-    /**
-     * @return void
-     */
     public function testFiltersOutPricesExceptCurrentProductConfigurationInstancePrices(): void
     {
         // Arrange
@@ -99,9 +93,6 @@ class FilterProductConfigurationPricesTest extends Unit
         );
     }
 
-    /**
-     * @return void
-     */
     public function testFiltersOutProductConfigurationPricesWhenProductConfigurationInstanceHashIsDifferent(): void
     {
         // Arrange
@@ -125,11 +116,6 @@ class FilterProductConfigurationPricesTest extends Unit
         $this->assertNull($priceProductTransfers[0]->getPriceDimension()->getProductConfigurationInstanceHash(), 'Expects product configuration instance hash to be empty.');
     }
 
-    /**
-     * @param bool $hasProductConfiguration
-     *
-     * @return \Generated\Shared\Transfer\PriceProductTransfer
-     */
     protected function createPriceProductTransfer(bool $hasProductConfiguration = false): PriceProductTransfer
     {
         $priceDimensionTransfer = (new PriceProductDimensionTransfer())

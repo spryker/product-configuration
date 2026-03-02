@@ -30,9 +30,6 @@ class GetProductConfigurationInstanceHashTest extends Unit
      */
     protected ProductConfigurationServiceTester $tester;
 
-    /**
-     * @return void
-     */
     public function testWillReturnSameHashForEqualProductConfigurationInstanceTransfers(): void
     {
         // Arrange
@@ -61,9 +58,6 @@ class GetProductConfigurationInstanceHashTest extends Unit
         $this->assertSame($productConfigurationInstanceTransfer1Hash, $productConfigurationInstanceTransfer2Hash);
     }
 
-    /**
-     * @return void
-     */
     public function testWillReturnDifferentHashForDifferentProductConfigurationInstanceTransfers(): void
     {
         // Arrange
@@ -91,9 +85,6 @@ class GetProductConfigurationInstanceHashTest extends Unit
         $this->assertNotSame($productConfigurationInstanceTransfer1Hash, $productConfigurationInstanceTransfer2Hash);
     }
 
-    /**
-     * @return void
-     */
     public function testWillReturnSameHashForProductConfigurationInstanceTransfersWhenDisabledFieldDifferent(): void
     {
         // Arrange

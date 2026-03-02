@@ -17,17 +17,11 @@ use Spryker\Zed\ProductConfiguration\Persistence\Propel\ProductConfiguration\Map
  */
 class ProductConfigurationPersistenceFactory extends AbstractPersistenceFactory
 {
-    /**
-     * @return \Orm\Zed\ProductConfiguration\Persistence\SpyProductConfigurationQuery
-     */
     public function createProductConfigurationQuery(): SpyProductConfigurationQuery
     {
         return SpyProductConfigurationQuery::create();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductConfiguration\Persistence\Propel\ProductConfiguration\Mapper\ProductConfigurationMapper
-     */
     public function createProductConfigurationMapper(): ProductConfigurationMapper
     {
         return new ProductConfigurationMapper();

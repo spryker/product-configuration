@@ -17,19 +17,11 @@ class ProductConfiguratorRequestDataCurrencyExpander implements ProductConfigura
      */
     protected $currencyClient;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Client\ProductConfigurationToCurrencyClientInterface $currencyClient
-     */
     public function __construct(ProductConfigurationToCurrencyClientInterface $currencyClient)
     {
         $this->currencyClient = $currencyClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         return $productConfiguratorRequestDataTransfer->setCurrencyCode(

@@ -9,8 +9,5 @@ namespace Spryker\Client\ProductConfiguration\Dependency\Client;
 
 interface ProductConfigurationToLocaleInterface
 {
-    /**
-     * @return string
-     */
     public function getCurrentLocale(): string;
 }

@@ -17,19 +17,11 @@ class ProductConfiguratorRequestDataCustomerExpander implements ProductConfigura
      */
     protected $customerClient;
 
-    /**
-     * @param \Spryker\Client\ProductConfiguration\Dependency\Client\ProductConfigurationToCustomerClientInterface $customerClient
-     */
     public function __construct(ProductConfigurationToCustomerClientInterface $customerClient)
     {
         $this->customerClient = $customerClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConfiguratorRequestDataTransfer
-     */
     public function expand(ProductConfiguratorRequestDataTransfer $productConfiguratorRequestDataTransfer): ProductConfiguratorRequestDataTransfer
     {
         $customerTransfer = $this->customerClient->getCustomer();
